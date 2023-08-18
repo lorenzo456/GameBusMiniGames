@@ -117,10 +117,10 @@
 
       function handleMsg(e) {
         //Origin should be GameBus FrontEnd
-        if(e.origin == "https://app3-new.gamebus.eu") {
+        if(e.origin == "http://localhost:8100/") {
             dataFromGamebus = e.data;
         }        
-        else if(e.origin === "https://lorenzo456.github.io"){
+        else if(e.origin === "http://localhost:55019"){
           if(dataFromGamebus !== null){
             SendMessageToUnity(dataFromGamebus);
           }
