@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1692804299290,
+  "timestamp": 1692967073316,
   "index": "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/index.html",
   "assetGroups": [
     {
@@ -67,7 +67,7 @@
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/8958.84e98c001ba963fde169.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9009.5f05b5d58685a84195fe.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9773.b6f130c2223ad5d87730.js",
-        "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9781.6874608d49958e85c990.js",
+        "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9781.91bbdcbf88a93e6d6ea7.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9831.ced53ea87f6753becc03.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/993.7824e7a26bd462021ae3.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/common.13b7b455426c55137ce2.js",
@@ -78,7 +78,7 @@
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills-css-shim.296235030c21c9a22521.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills-dom.f6318e9d7e23a089458b.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills.3c3b6dc02047445dd82c.js",
-        "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/runtime.ba6a623ddc290d58961d.js",
+        "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/runtime.a4b44497106bfcd4274d.js",
         "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/styles.9a2328201534accc5f1d.css"
       ],
       "patterns": []
@@ -170,7 +170,7 @@
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/8958.84e98c001ba963fde169.js": "14a50f515ab45238748ea8590f993a421fbeca8f",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9009.5f05b5d58685a84195fe.js": "a2a92a3c3f92ed8c223c74d6341902307aeb7d38",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9773.b6f130c2223ad5d87730.js": "81255faf39c50540cda46022cb6b844ffe1ca5e6",
-    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9781.6874608d49958e85c990.js": "e990e2426722cdd020839f3f9df632e5a3d576b6",
+    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9781.91bbdcbf88a93e6d6ea7.js": "392e22e90ce675ded9378d99183879d5eb916b85",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/9831.ced53ea87f6753becc03.js": "e99b03d7678852efaa67a2c9524266921d8a61c2",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/993.7824e7a26bd462021ae3.js": "33ef9d7b3b60c01249da71a45c509fc28b5f1fcc",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/assets/icon/favicon.png": "7798b8e0eb61d7375c245af78bbf5c916932bf13",
@@ -191,14 +191,14 @@
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/assets/socialShare/twitter.png": "dfe9b4a414c0e5ffe9c8818502ed5352da136359",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/assets/socialShare/whatsapp.png": "f82a628afb7c4c4dbace5aff8e901fd9b3d3f4af",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/common.13b7b455426c55137ce2.js": "8ad4a03a85c65f60a8763f91db03f4192e45673e",
-    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/index.html": "342dbe546530130252904c853644bcff7dc5aa6d",
+    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/index.html": "d8c27ad6c9e8f7143852ab842a85b8c38f9591aa",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/main.0449f4979ff0c5d3207a.js": "ef8589311cde5ae857ad7993ddf5b24bcd2cede1",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/manifest.webmanifest": "da2061dba175bf2d881980e8596ff5343e2dd7b6",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills-core-js.c436c82ed99801a41d19.js": "6e2bd06ec2c94e85a4544e037c92721b7acf0402",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills-css-shim.296235030c21c9a22521.js": "5839208bd9c96da3ebff137223e5a0ebc57932f0",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills-dom.f6318e9d7e23a089458b.js": "5c9a9466a3a50a5224fcde716005e76cc94adecb",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/polyfills.3c3b6dc02047445dd82c.js": "08c7a8fb8594d3277fc08fb5e63a520b0caf926f",
-    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/runtime.ba6a623ddc290d58961d.js": "5a0bc27c2c9e59c1da320b9074ba3e447a9cff91",
+    "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/runtime.a4b44497106bfcd4274d.js": "69ed9a281629279c350028af2f9e239e1e8fce25",
     "https://lorenzo456.github.io/GameBusMiniGames/Diabetes-Trivia/styles.9a2328201534accc5f1d.css": "6b59a9c47984e14a46021b8fddf74a1a5a03576d"
   },
   "navigationUrls": [
