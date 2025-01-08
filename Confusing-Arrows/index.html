@@ -22,10 +22,6 @@
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Confusing-Arrows</div>
       </div>
-      <!-- <div>
-        <input type="text" value="Send to unity" id="SendToUnityID" >
-        <button onclick="SendMessageToUnity('Hello this is a test from the DOM')">Send to Unity external</button>
-      </div> -->
     </div>
     <script>
       var container = document.querySelector("#unity-container");
@@ -61,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Confusing-Arrows.loader.js";
+      var loaderUrl = buildUrl + "/Builds.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Confusing-Arrows.data.unityweb",
-        frameworkUrl: buildUrl + "/Confusing-Arrows.framework.js.unityweb",
-        codeUrl: buildUrl + "/Confusing-Arrows.wasm.unityweb", 
+        dataUrl: buildUrl + "/Builds.data.unityweb",
+        frameworkUrl: buildUrl + "/Builds.framework.js.unityweb",
+        codeUrl: buildUrl + "/Builds.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Confusing-Arrows",
@@ -92,7 +88,6 @@
       }
       loadingBar.style.display = "block";
       var globalUnityInstance;
-      var dataFromGamebus;
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -105,31 +100,54 @@
             unityInstance.SetFullscreen(1);
           };
         }).catch((message) => {
-          alert(message);
+          // alert(message);
         });
       };
 
-      function SendMessageToUnity(){
-        globalUnityInstance.SendMessage('DataManager', 'GetDataFromGameBus', dataFromGamebus);
-      }
-
-      
-
-      function handleMsg(e) {
-        //Origin should be GameBus FrontEnd
-        if(e.origin == "https://app3-new.gamebus.eu") {
-            dataFromGamebus = e.data;
-        }        
-        else if(e.origin === "https://lorenzo456.github.io"){
-          if(dataFromGamebus !== null){
-            SendMessageToUnity(dataFromGamebus);
-          }
-        } 
-        else {
-          alert("[IN UNITY WEBGL PAGE] A message was sent from the wrong Origin: " + e.origin + " " + e.data);
+      async function waitForUnityInstance() {
+        while (!globalUnityInstance) {
+          // Wait for Unity instance to be available
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
       }
-      addEventListener("message", handleMsg, true);
+
+      async function SendMessageToUnity(dataFromGamebus) {
+        await waitForUnityInstance(); // Wait until the Unity instance is loaded
+
+        if (globalUnityInstance && dataFromGamebus) {
+          // Send the message to Unity once the instance is ready
+          globalUnityInstance.SendMessage('GameManager', 'ReceiveDataFromGameBus', dataFromGamebus);
+        } else {
+          // Handle case when Unity instance or data is missing
+          console.log("Unity instance is not ready or data is missing.");
+        }
+      }
+
+      function handleMsg(e) {
+
+        function parseJSON(data) {
+        try {
+            return JSON.parse(data);
+        } catch (error) {
+            console.warn("Failed to parse JSON:", error, data);
+            return null; // Return null if parsing fails
+        }
+        }
+
+        // Origin should be GameBus FrontEnd
+        if (e.origin === "https://app4b.gamebus.eu" || e.origin === "http://localhost:8100") {
+              const parsedData = parseJSON(e.data);
+                if(parsedData){
+                  SendMessageToUnity(e.data);
+                  console.log("[IN HTML] RECEIVED DATA FROM GAMEBUS SUCCESSFULLY" + e.data)
+                }
+        } else {
+            // Optionally log or handle unexpected origins
+            // console.warn(`[IN UNITY WEBGL PAGE] A message was sent from an unexpected origin: ${e.origin} ${e.data}`);
+        }
+    }
+
+    addEventListener("message", handleMsg, true);
 
       document.body.appendChild(script);
     </script>
